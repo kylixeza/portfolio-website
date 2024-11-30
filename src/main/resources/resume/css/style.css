@@ -6768,7 +6768,7 @@ button.bg-dark:focus {
 
 .pr-3,
 .px-3 {
-  padding-right: 1rem !important; }
+  padding-right: 3rem !important; }
 
 .pb-3,
 .py-3 {
@@ -6776,7 +6776,7 @@ button.bg-dark:focus {
 
 .pl-3,
 .px-3 {
-  padding-left: 1rem !important; }
+  padding-left: 3rem !important; }
 
 .p-4 {
   padding: 1.5rem !important; }
