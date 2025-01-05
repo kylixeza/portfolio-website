@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.kylix"
-version = "1.4.0"
+version = "1.4.1"
 
 application {
     mainClass.set("io.ktor.server.netty.EngineMain")
@@ -17,7 +17,7 @@ application {
 }
 
 tasks.create("stage") {
-    dependsOn(listOf("build"))
+    dependsOn(listOf("installDist"))
 }
 
 repositories {
