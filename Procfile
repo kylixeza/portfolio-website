@@ -1,1 +1,0 @@
-web: build/install/kylix-resume/bin/kylix-resume
