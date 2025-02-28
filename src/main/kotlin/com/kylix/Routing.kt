@@ -18,5 +18,6 @@ fun Application.configureRouting() {
     routing {
         staticResources("/", "resume")
         staticResources("/not-found", "resume", index = "404.html")
+        staticResources("/sitemap.xml", "", index = "sitemap.xml")
     }
 }
