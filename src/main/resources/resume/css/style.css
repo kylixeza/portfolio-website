@@ -9106,11 +9106,11 @@ textarea.form-control {
     font-size: 24px; }
 
 .ftco-section {
-  padding: 7em 0;
+  padding: 5em 0;
   position: relative; }
   @media (max-width: 767.98px) {
     .ftco-section {
-      padding: 6em 0; } }
+      padding: 4em 0; } }
 
 .ftco-no-pt {
   padding-top: 0 !important; }
@@ -9685,6 +9685,51 @@ textarea.form-control {
   -webkit-animation: loader-dash 1.5s ease-in-out infinite;
   animation: loader-dash 1.5s ease-in-out infinite;
   stroke-linecap: round; }
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+}
+.news-card {
+  display: flex;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+.news-card:hover {
+  transform: scale(1.02);
+}
+.news-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+.news-content {
+  padding: 15px;
+  flex-grow: 1;
+}
+.news-content h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+.news-content p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #555;
+  text-overflow: ellipsis;
+}
+.news-footer {
+  font-size: 0.8em;
+  color: #888;
+  margin-top: 10px;
+}
 
 @-webkit-keyframes loader-rotate {
   100% {
