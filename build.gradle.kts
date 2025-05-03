@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.kylix"
-version = "1.7.0"
+version = "1.7.1"
 
 application {
     mainClass.set("io.ktor.server.netty.EngineMain")
