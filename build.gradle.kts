@@ -1,13 +1,15 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 val kotlin_version: String by project
 val logback_version: String by project
 
 plugins {
-    kotlin("jvm") version "2.1.0"
+    kotlin("jvm") version "2.1.21"
     id("io.ktor.plugin") version "3.0.1"
 }
 
 group = "com.kylix"
-version = "1.7.1"
+version = "1.7.2"
 
 application {
     mainClass.set("io.ktor.server.netty.EngineMain")
@@ -38,5 +40,15 @@ dependencies {
 tasks.jar {
     manifest {
         attributes["Main-Class"] = "com.kylix.ApplicationKt"
+    }
+}
+
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(18)) // or 24, just make it consistent
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_18)
     }
 }
