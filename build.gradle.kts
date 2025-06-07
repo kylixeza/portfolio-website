@@ -30,9 +30,11 @@ dependencies {
     implementation("io.ktor:ktor-server-core-jvm")
     implementation("io.ktor:ktor-server-host-common-jvm")
     implementation("io.ktor:ktor-server-netty-jvm")
+    implementation("io.ktor:ktor-server-call-logging-jvm")
     implementation("ch.qos.logback:logback-classic:$logback_version")
     implementation("io.ktor:ktor-server-config-yaml-jvm")
     implementation("io.ktor:ktor-server-status-pages-jvm")
+    implementation("org.quartz-scheduler:quartz:2.5.0")
     testImplementation("io.ktor:ktor-server-test-host-jvm")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 }
