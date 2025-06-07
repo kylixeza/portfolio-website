@@ -4,7 +4,7 @@ val kotlin_version: String by project
 val logback_version: String by project
 
 plugins {
-    kotlin("jvm") version "2.1.21"
+    kotlin("jvm") version "2.1.0"
     id("io.ktor.plugin") version "3.0.1"
 }
 
@@ -44,11 +44,11 @@ tasks.jar {
 }
 
 java {
-    toolchain.languageVersion.set(JavaLanguageVersion.of(18)) // or 24, just make it consistent
+    toolchain.languageVersion.set(JavaLanguageVersion.of(17)) // or 24, just make it consistent
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
     compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_18)
+        jvmTarget.set(JvmTarget.JVM_17)
     }
 }
