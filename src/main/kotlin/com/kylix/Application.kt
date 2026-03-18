@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory
 
 fun main(args: Array<String>) {
     LoggerFactory.getLogger("Application").debug("Kylix Resume Application started successfully.")
-    CronManager.start()
+    //CronManager.start()
     io.ktor.server.netty.EngineMain.main(args)
 }
 

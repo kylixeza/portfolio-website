@@ -19,6 +19,8 @@ application {
 }
 
 tasks.create("stage") {
+    group = "build"
+    description = "Build for deployment"
     dependsOn("installDist")
 }
 
