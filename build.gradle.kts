@@ -46,11 +46,15 @@ tasks.jar {
 }
 
 java {
-    toolchain.languageVersion.set(JavaLanguageVersion.of(17)) // or 24, just make it consistent
+    toolchain.languageVersion.set(JavaLanguageVersion.of(21))
+}
+
+kotlin {
+    jvmToolchain(21)
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
     compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_17)
+        jvmTarget.set(JvmTarget.JVM_21)
     }
 }
