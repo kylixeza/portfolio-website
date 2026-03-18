@@ -18,7 +18,7 @@ application {
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
 }
 
-tasks.register("stage") {
+tasks.create("stage") {
     dependsOn("shadowJar")
 }
 
