@@ -1,1 +1,1 @@
-web: java -jar build/libs/app.jar
+web: ./build/install/kylix-resume/bin/kylix-resume

@@ -19,7 +19,7 @@ application {
 }
 
 tasks.create("stage") {
-    dependsOn("shadowJar")
+    dependsOn("installDist")
 }
 
 repositories {
