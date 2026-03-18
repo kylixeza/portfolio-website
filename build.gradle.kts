@@ -6,6 +6,7 @@ val logback_version: String by project
 plugins {
     kotlin("jvm") version "2.1.0"
     id("io.ktor.plugin") version "3.0.1"
+    id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
 group = "com.kylix"
@@ -18,8 +19,8 @@ application {
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
 }
 
-tasks.create("stage") {
-    dependsOn(listOf("installDist"))
+tasks.register("stage") {
+    dependsOn("shadowJar")
 }
 
 repositories {
@@ -57,4 +58,8 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach 
     compilerOptions {
         jvmTarget.set(JvmTarget.JVM_21)
     }
+}
+
+tasks.shadowJar {
+    archiveFileName.set("app.jar")
 }
