@@ -19,6 +19,7 @@ fun Application.configureRouting() {
         staticResources("/", "resume")
         staticResources("/not-found", "resume", index = "404.html")
         staticResources("/sitemap.xml", "", index = "sitemap.xml")
+        staticResources("/robots.txt", "", index = "robots.txt")
         staticResources("/for-amanda", "happybirthday", index = "index.html")
         get("/for-amanda") {
             call.respondRedirect("/for-amanda/index.html")
