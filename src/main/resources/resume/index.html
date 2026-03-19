@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
 		<title>Kylix Eza Saputra — Kotlin Multiplatform Developer</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="images/favicon.webp">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -40,16 +40,16 @@
 
 		<link rel="canonical" href="https://kylixeza.my.id/">
 
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-
-    <link rel="stylesheet" href="css/aos.css">
+		<link rel="stylesheet" href="css/animate.css" media="print" onload="this.media='all'">
+		<link rel="stylesheet" href="css/owl.carousel.min.css" media="print" onload="this.media='all'">
+		<link rel="stylesheet" href="css/owl.theme.default.min.css" media="print" onload="this.media='all'">
+		<link rel="stylesheet" href="css/magnific-popup.css" media="print" onload="this.media='all'">
+		<link rel="stylesheet" href="css/aos.css" media="print" onload="this.media='all'">
 
     <link rel="stylesheet" href="css/ionicons.min.css">
     
@@ -99,7 +99,7 @@
         </div>
       </div>
       <div class="mouse">
-				<a href="#" class="mouse-icon">
+				<a href="#" class="mouse-icon" aria-label="Scroll to below">
 					<div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
 				</a>
 			</div>
@@ -111,7 +111,7 @@
     			<div class="col-md-6 col-lg-6 d-flex">
     				<div class="img-about img d-flex align-items-stretch">
     					<div class="overlay"></div>
-	    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(images/about.jpg);">
+	    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(images/about.webp);">
 	    				</div>
     				</div>
     			</div>
@@ -443,28 +443,34 @@
         </div>
     		<div class="row no-gutters">
     			<div class="col-md-4">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/soulmath.png); background-size: 100%">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/soulmath.webp); background-size: 100%">
     					<div class="overlay"></div>
 	    				<div class="text text-center p-4">
 	    					<h3 style="color: white">SoulMath</h3>
 	    					<span>Mobile App</span>
 							<div style="display: flex; justify-content: space-between; padding: 20px; width: auto">
 								<a href="https://play.google.com/store/apps/details?id=com.ramiyon.soulmath_v3&hl=id">
-									<img src="images/available_playstore.png" alt="SoulMath" style="max-width: 150px">
+									<picture>
+										<source srcset="images/available_playstore.webp" type="image/webp">
+										<img src="images/available_playstore.webp" alt="SoulMath" style="max-width: 150px">
+									</picture>
 								</a>
 							</div>
 	    				</div>
     				</div>
   				</div>
   				<div class="col-md-4">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/beu.png);">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/beu.webp);">
     					<div class="overlay"></div>
 	    				<div class="text text-center p-4">
 							<h3 style="color: white">Beu</h3>
 	    					<span>Mobile App</span>
 							<div style="display: flex; justify-content: space-between; padding: 20px; width: auto">
 								<a href="https://cookwithbeu.web.id">
-									<img src="images/available_beu.png" alt="SoulMath" style="max-width: 150px">
+									<picture>
+										<source srcset="images/available_beu.webp" type="image/webp">
+										<img src="images/available_beu.webp" alt="SoulMath" style="max-width: 150px">
+									</picture>
 								</a>
 							</div>
 	    				</div>
@@ -472,59 +478,74 @@
   				</div>
 
     			<div class="col-md-4">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/dopalearn.png);">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/dopalearn.webp);">
     					<div class="overlay"></div>
 	    				<div class="text text-center p-4">
 	    					<h3 style="color: white">Dopalearn</h3>
 	    					<span>Mobile App</span>
 							<div style="display: flex; justify-content: space-evenly; padding: 20px; width: auto">
 								<a href="https://play.google.com/store/apps/details?id=com.littlebrainboosters.dopalearn">
-									<img src="images/available_playstore.png" alt="SoulMath" style="max-width: 150px">
+									<picture>
+										<source srcset="images/available_playstore.webp" type="image/webp">
+										<img src="images/available_playstore.webp" alt="SoulMath" style="max-width: 150px">
+									</picture>
 								</a>
 								<a href="https://apps.apple.com/id/app/dopalearn/id1542507323">
-									<img src="images/available_appstore.png" alt="SoulMath" style="max-width: 150px">
+									<picture>
+										<source srcset="images/available_appstore.webp" type="image/webp">
+										<img src="images/available_appstore.webp" alt="SoulMath" style="max-width: 150px">
+									</picture>
 								</a>
 							</div>
 	    				</div>
     				</div>
     			</div>
     			<div class="col-md-4">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/pondpedia.png);">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/pondpedia.webp);">
     					<div class="overlay"></div>
 	    				<div class="text text-center p-4">
 	    					<h3 style="color: white">PondPedia</h3>
 	    					<span>Mobile App</span>
 							<div style="display: flex; justify-content: space-between; padding: 20px; width: auto">
 								<a href="https://play.google.com/store/apps/details?id=com.pondpedia.android.pondpedia">
-									<img src="images/available_playstore.png" alt="SoulMath" style="max-width: 150px">
+									<picture>
+										<source srcset="images/available_playstore.webp" type="image/webp">
+										<img src="images/available_playstore.webp" alt="SoulMath" style="max-width: 150px">
+									</picture>
 								</a>
 							</div>
 	    				</div>
     				</div>
     			</div>
     			<div class="col-md-4">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/firetor.png);">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/firetor.webp);">
     					<div class="overlay"></div>
 	    				<div class="text text-center p-4">
 	    					<h3 style="color: white">Firetor</h3>
 	    					<span>Library</span>
 							<div style="display: flex; justify-content: space-between; padding: 20px; width: auto">
 								<a href="https://github.com/kylixeza/firetor">
-									<img src="images/available_github.png" alt="SoulMath" style="max-width: 100px">
+									<picture>
+										<source srcset="images/available_github.webp" type="image/webp">
+										<img src="images/available_github.webp" alt="SoulMath" style="max-width: 100px">
+									</picture>
 								</a>
 							</div>
 	    				</div>
     				</div>
     			</div>
     			<div class="col-md-4">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/surveyasia.png);">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/surveyasia.webp);">
     					<div class="overlay"></div>
 	    				<div class="text text-center p-4">
 	    					<h3 style="color: white">SurveyAsia</h3>
 	    					<span>Mobile App</span>
 							<div style="display: flex; justify-content: space-between; padding: 20px; width: auto">
 								<a href="https://play.google.com/store/apps/details?id=com.citiasia.survei_asia">
-									<img src="images/available_playstore.png" alt="SoulMath" style="max-width: 150px">
+									<picture>
+										<source srcset="images/available_playstore.webp" type="image/webp">
+										<img src="images/available_playstore.webp" alt="SoulMath" style="max-width: 150px">
+									</picture>
 								</a>
 							</div>
 	    				</div>
@@ -547,7 +568,10 @@
 
 					<a href="https://medium.com/developer-student-club-universitas-brawijaya/gdsc-ub-2021-the-threshold-of-a-new-age-154496f6916e">
 						<div class="news-card">
-							<img class="news-image" src="images/news_1.png" alt="News Image 1">
+							<picture>
+								<source srcset="images/news_1.webp" type="image/webp">
+								<img class="news-image" src="images/news_1.webp" alt="News Image 1">
+							</picture>
 							<div class="news-content">
 								<h3>GDSC UB 2021: The Threshold of a New Age</h3>
 								<p>TechSeries Workshop talking about KOTLIN 101 with our Android Learning Development, Kylix Eza Saputra. The workshop was held for two days in a row, where the learning journey was divided into two topics. The first day covered the Basic Programming with Kotlin and the second day talked about Kotlin as OOP & Clean Code.</p>
@@ -560,7 +584,10 @@
 
 					<a href="https://prasetya.ub.ac.id/kenalkan-google-solution-challenge-pada-mahasiswa-filkom-gdsc-ub-selenggarakan-info-session/">
 						<div class="news-card">
-							<img class="news-image" src="images/news_2.png" alt="News Image 2">
+							<picture>
+								<source srcset="images/news_2.webp" type="image/webp">
+								<img class="news-image" src="images/news_2.webp" alt="News Image 2">
+							</picture>
 							<div class="news-content">
 								<h3>Kenalkan Google Solution Challenge Pada Mahasiswa, FILKOM & GDSC UB Selenggarakan Info Session</h3>
 								<p>Dalam kesempatan info session kali ini, GDSC mengundang Kylix Eza Saputra (Eza) selaku Curiculum Lead GDSC UB yang menjelaskan timeline Google Solution Challenge 2023.</p>
@@ -573,7 +600,10 @@
 
 					<a href="https://prasetya.ub.ac.id/filkom-ub-hasilkan-aplikasi-untuk-pembelajaran-anak-berkebutuhan-khusus-abk-tunagrahita-di-smkn-2-malang/">
 						<div class="news-card">
-							<img class="news-image" src="images/news_3.png" alt="News Image 3">
+							<picture>
+								<source srcset="images/news_3.webp" type="image/webp">
+								<img class="news-image" src="images/news_3.webp" alt="News Image 3">
+							</picture>
 							<div class="news-content">
 								<h3>FILKOM Buat Aplikasi Pembelajaran Anak Berkebutuhan Khusus (ABK) Tunagrahita di SMKN 2, Malang</h3>
 								<p>Penelitian ini menghasilkan aplikasi pembelajaran SoulMath yang ditujukan dan dikembangkan khusus untuk membantu siswa ABK Tunagrahita dalam belajar kemampuan fundamental seperti materi Matematika Dasar.</p>
@@ -586,7 +616,10 @@
 
 					<a href="https://www.detik.com/edu/edutainment/d-7700021/terinspirasi-ibu-jualan-soto-alumnus-top-ub-ini-buat-aplikasi-kuliner-nusantara">
 						<div class="news-card">
-							<img class="news-image" src="images/news_4.png" alt="News Image 4">
+							<picture>
+								<source srcset="images/news_4.webp" type="image/webp">
+								<img class="news-image" src="images/news_4.webp" alt="News Image 4">
+							</picture>
 							<div class="news-content">
 								<h3>Terinspirasi Ibu Jualan Soto, Alumnus Top UB Ini Buat Aplikasi Kuliner Nusantara</h3>
 								<p>Perjuangan ibu berjualan soto rupanya memberikan inspirasi berkarya bagi Kylix Eza Saputra. Laki-laki yang baru saja diwisuda dari Universitas Brawijaya (UB)</p>
