@@ -39,30 +39,20 @@
     </script>
 
     <link rel="canonical" href="https://kylixeza.my.id/">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <link rel="stylesheet" href="css/futuristic.css">
+    <link rel="stylesheet" href="css/sunshine.css">
 </head>
 <body>
 
-    <!-- Particle Canvas Background -->
-    <canvas id="particle-canvas"></canvas>
+    <canvas id="confetti-canvas" style="display:none;"></canvas>
 
-    <!-- Ambient Glow Orbs -->
-    <div class="ambient-orb ambient-orb-1"></div>
-    <div class="ambient-orb ambient-orb-2"></div>
-    <div class="ambient-orb ambient-orb-3"></div>
-
-    <!-- Navigation -->
-    <nav class="nav-glass" id="main-nav">
-        <div class="nav-container">
-            <a href="#hero" class="nav-logo">
-                <span class="logo-bracket">&lt;</span>Kylix<span class="logo-bracket">/&gt;</span>
-            </a>
+    <!-- ═══ NAVIGATION ═══ Floating pill nav -->
+    <nav class="nav" id="main-nav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">Kylix<span class="dot">.</span></a>
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
                 <span></span><span></span><span></span>
             </button>
@@ -79,454 +69,331 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ═══ HERO ═══ Asymmetric split: text left, photo right -->
     <section class="hero" id="hero">
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span class="pulse-dot"></span>
-                Available for opportunities
+        <div class="hero-inner">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span class="pulse"></span>
+                    Open to opportunities
+                </div>
+                <h1>
+                    <span class="hero-greeting">Hey there! <span class="wave">👋</span></span>
+                    <span class="hero-name">I'm <span class="gradient">Kylix Eza</span><br>Saputra</span>
+                </h1>
+                <div class="hero-roles">
+                    <span class="prefix">I'm a </span>
+                    <span id="typewriter"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <div class="hero-actions">
+                    <a href="#about" class="btn btn-fill">
+                        See My Work <i class="fa-solid fa-arrow-down"></i>
+                    </a>
+                    <a href="https://storage.googleapis.com/kylix_portfolio_bucket/cv/Resume_Kylix%20Eza%20Saputra.pdf" class="btn btn-ghost" target="_blank">
+                        <i class="fa-solid fa-download"></i> Download CV
+                    </a>
+                </div>
             </div>
-            <h1 class="hero-title">
-                <span class="hero-greeting">Hey! I am</span>
-                <span class="hero-name">Kylix Eza<br>Saputra</span>
-            </h1>
-            <div class="hero-role">
-                <span class="hero-role-prefix">I'm a&nbsp;</span>
-                <span class="typewriter" id="typewriter"></span>
-                <span class="cursor">|</span>
+            <div class="hero-visual">
+                <div class="hero-blob hero-blob-1"></div>
+                <div class="hero-blob hero-blob-2"></div>
+                <div class="hero-blob hero-blob-3"></div>
+                <div class="hero-photo-wrap">
+                    <img src="images/about.webp" alt="Kylix Eza Saputra">
+                </div>
+                <div class="hero-sticker hero-sticker-1">
+                    ⭐ GPA 3.96
+                </div>
+                <div class="hero-sticker hero-sticker-2">
+                    🚀 3+ Years Exp
+                </div>
             </div>
-            <div class="hero-cta">
-                <a href="#about" class="btn-primary-glow">
-                    <span>Explore My Work</span>
-                    <i class="fa-solid fa-arrow-down"></i>
-                </a>
-                <a href="https://storage.googleapis.com/kylix_portfolio_bucket/cv/Resume_Kylix%20Eza%20Saputra.pdf" class="btn-outline-glow" target="_blank">
-                    <i class="fa-solid fa-download"></i>
-                    <span>Download CV</span>
-                </a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-mouse">
-                <div class="scroll-wheel"></div>
-            </div>
-            <span>Scroll Down</span>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ═══ ABOUT ═══ Centered narrative style -->
     <section class="section" id="about">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;about&gt;</span>
+            <div class="section-header" data-reveal>
+                <span class="section-emoji">🧑‍💻</span>
                 <h2 class="section-title">About Me</h2>
                 <div class="section-line"></div>
             </div>
-            <div class="about-grid">
-                <div class="about-image-wrapper" data-animate="fade-right">
-                    <div class="about-image-frame">
-                        <img src="images/about.webp" alt="Kylix Eza Saputra" class="about-image">
-                        <div class="about-image-border"></div>
-                    </div>
-                    <div class="about-stats">
-                        <div class="stat-card glass-card">
-                            <span class="stat-number">3.96</span>
-                            <span class="stat-label">GPA / 4.00</span>
-                        </div>
-                        <div class="stat-card glass-card">
-                            <span class="stat-number">3+</span>
-                            <span class="stat-label">Years Exp.</span>
-                        </div>
-                    </div>
+            <div class="about-wrap" data-reveal>
+                <h3 class="about-subtitle">Mobile Developer & Tech Enthusiast ✨</h3>
+                <p class="about-text">
+                    I'm an enthusiastic, disciplined, and hardworking developer with a passion for crafting beautiful mobile experiences. I specialize in the Kotlin ecosystem from Native Android to Compose Multiplatform and love turning ideas into polished, user friendly applications.
+                </p>
+                <p class="about-text">
+                    With extensive experience building solid Android applications for clients across Indonesia and abroad, I thrive in cross-functional teams and am always excited to learn something new. When I'm not coding, you'll find me exploring new tech or mentoring fellow developers.
+                </p>
+                <div class="about-chips">
+                    <div class="chip chip-coral"><i class="fa-solid fa-code"></i> Kotlin & Android</div>
+                    <div class="chip chip-mint"><i class="fa-solid fa-mobile-screen"></i> Compose Multiplatform</div>
+                    <div class="chip chip-lavender"><i class="fa-solid fa-database"></i> Database Management</div>
+                    <div class="chip chip-sky"><i class="fa-solid fa-server"></i> Backend Development</div>
                 </div>
-                <div class="about-content" data-animate="fade-left">
-                    <h3 class="about-subtitle">Mobile Developer & Tech Enthusiast</h3>
-                    <p class="about-text">
-                        Kylix Eza Saputra is an enthusiastic, disciplined, and hardworking individual. He possesses good communication, teamwork, and leadership skills. He has passion for mobile application development, especially in Kotlin ecosystem such as Native Android and Compose Multiplatform.
-                    </p>
-                    <p class="about-text">
-                        He has extensive experience as an Android Engineer in various projects, where he has been responsible for building solid and reliable Android applications with high-quality software. His clients come from both Indonesia and abroad.
-                    </p>
-                    <div class="about-highlights">
-                        <div class="highlight-item">
-                            <i class="fa-solid fa-code"></i>
-                            <span>Kotlin & Android</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fa-solid fa-mobile-screen"></i>
-                            <span>Compose Multiplatform</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fa-solid fa-database"></i>
-                            <span>Database Management</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fa-solid fa-server"></i>
-                            <span>Backend Development</span>
-                        </div>
-                    </div>
-                    <div class="about-social">
-                        <a href="https://github.com/kylixeza" class="social-link" target="_blank" aria-label="GitHub">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/kylixezasaputra/" class="social-link" target="_blank" aria-label="LinkedIn">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                        <a href="mailto:kylixeza.dev@gmail.com" class="social-link" aria-label="Email">
-                            <i class="fa-solid fa-envelope"></i>
-                        </a>
-                    </div>
+                <div class="about-socials">
+                    <a href="https://github.com/kylixeza" class="social-btn" target="_blank" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kylixezasaputra/" class="social-btn" target="_blank" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:kylixeza.dev@gmail.com" class="social-btn" aria-label="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- ═══ EXPERIENCE ═══ Card stack with colored borders -->
     <section class="section" id="experience">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;experience&gt;</span>
+            <div class="section-header" data-reveal>
+                <span class="section-emoji">💼</span>
                 <h2 class="section-title">Experience</h2>
                 <div class="section-line"></div>
             </div>
-            <div class="timeline">
-                <div class="timeline-item" data-animate="fade-up">
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
+            <div class="exp-stack">
+                <div class="exp-card" data-reveal>
+                    <div class="exp-top">
+                        <span class="exp-date"><i class="fa-regular fa-calendar"></i> Oct 2024 — Present</span>
+                        <span class="exp-badge">Current</span>
                     </div>
-                    <div class="timeline-content glass-card">
-                        <div class="timeline-header">
-                            <span class="timeline-date">
-                                <i class="fa-regular fa-calendar"></i>
-                                October 2024 — Present
-                            </span>
-                            <span class="timeline-badge badge-current">Current</span>
-                        </div>
-                        <h3 class="timeline-title">Mobile Developer</h3>
-                        <span class="timeline-company">
-                            <i class="fa-solid fa-building"></i>
-                            PT Abhimantra Sistem Solusindo · Full Time · Jakarta
-                        </span>
-                        <ul class="timeline-list">
-                            <li>Developed, updated, and maintained mobile application (both Android and iOS) using Flutter and Compose Multiplatform to ensuring it was scalable, reliable, and user-friendly.</li>
-                            <li>Collaborated with cross-functional teams that consist of people from various background and actively participated in every updates.</li>
-                            <li>Worked closely with the backend team to ensure the application was connected to the server and the data was stored properly.</li>
-                        </ul>
-                    </div>
+                    <h3 class="exp-role">Mobile Developer</h3>
+                    <span class="exp-company"><i class="fa-solid fa-building"></i> PT Abhimantra Sistem Solusindo · Full Time · Jakarta</span>
+                    <ul class="exp-list">
+                        <li>Developed, updated, and maintained mobile application (both Android and iOS) using Flutter and Compose Multiplatform to ensuring it was scalable, reliable, and user-friendly.</li>
+                        <li>Collaborated with cross-functional teams that consist of people from various background and actively participated in every updates.</li>
+                        <li>Worked closely with the backend team to ensure the application was connected to the server and the data was stored properly.</li>
+                    </ul>
                 </div>
 
-                <div class="timeline-item" data-animate="fade-up">
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
+                <div class="exp-card" data-reveal>
+                    <div class="exp-top">
+                        <span class="exp-date"><i class="fa-regular fa-calendar"></i> Aug 2023 — Oct 2024</span>
                     </div>
-                    <div class="timeline-content glass-card">
-                        <div class="timeline-header">
-                            <span class="timeline-date">
-                                <i class="fa-regular fa-calendar"></i>
-                                August 2023 — October 2024
-                            </span>
-                        </div>
-                        <h3 class="timeline-title">Android Developer</h3>
-                        <span class="timeline-company">
-                            <i class="fa-solid fa-building"></i>
-                            Little Brain Boosters® · Part Time · Remote (Netherlands)
-                        </span>
-                        <ul class="timeline-list">
-                            <li>Developed, updated, and maintained mobile application (Android) using Kotlin and Firebase ensuring it was scalable, reliable, and user-friendly.</li>
-                            <li>Collaborated with cross-functional teams that consist of people from around the world and actively participated in weekly review.</li>
-                            <li>Applied advance optimization techniques to improve app performance to reducing load times up to 80%.</li>
-                            <li>Deal with various things tied to the Play Console such as the testing process in internal tests, deploy in production, in app updates, and subscription billing.</li>
-                        </ul>
-                    </div>
+                    <h3 class="exp-role">Android Developer</h3>
+                    <span class="exp-company"><i class="fa-solid fa-building"></i> Little Brain Boosters® · Part Time · Remote (Netherlands)</span>
+                    <ul class="exp-list">
+                        <li>Developed, updated, and maintained mobile application (Android) using Kotlin and Firebase ensuring it was scalable, reliable, and user-friendly.</li>
+                        <li>Collaborated with cross-functional teams that consist of people from around the world and actively participated in weekly review.</li>
+                        <li>Applied advance optimization techniques to improve app performance to reducing load times up to 80%.</li>
+                        <li>Deal with various things tied to the Play Console such as the testing process in internal tests, deploy in production, in app updates, and subscription billing.</li>
+                    </ul>
                 </div>
 
-                <div class="timeline-item" data-animate="fade-up">
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
+                <div class="exp-card" data-reveal>
+                    <div class="exp-top">
+                        <span class="exp-date"><i class="fa-regular fa-calendar"></i> Feb 2023 — Jul 2023</span>
                     </div>
-                    <div class="timeline-content glass-card">
-                        <div class="timeline-header">
-                            <span class="timeline-date">
-                                <i class="fa-regular fa-calendar"></i>
-                                February 2023 — July 2023
-                            </span>
-                        </div>
-                        <h3 class="timeline-title">Mobile Developer</h3>
-                        <span class="timeline-company">
-                            <i class="fa-solid fa-building"></i>
-                            Citiasia Inc. · Internship · Jakarta
-                        </span>
-                        <ul class="timeline-list">
-                            <li>Developed and implemented best practice to build mobile application using Flutter, ensuring good performance and experiences on both Android and iOS.</li>
-                            <li>Partnered with UI/UX designers to translate concept of their designs into visually appealing user interface.</li>
-                            <li>Participated in scrum practices including sprint planning, sprint reviews, and retrospective.</li>
-                        </ul>
-                    </div>
+                    <h3 class="exp-role">Mobile Developer</h3>
+                    <span class="exp-company"><i class="fa-solid fa-building"></i> Citiasia Inc. · Internship · Jakarta</span>
+                    <ul class="exp-list">
+                        <li>Developed and implemented best practice to build mobile application using Flutter, ensuring good performance and experiences on both Android and iOS.</li>
+                        <li>Partnered with UI/UX designers to translate concept of their designs into visually appealing user interface.</li>
+                        <li>Participated in scrum practices including sprint planning, sprint reviews, and retrospective.</li>
+                    </ul>
                 </div>
             </div>
 
             <!-- Education -->
-            <div class="section-header" style="margin-top: 4rem;">
-                <span class="section-tag">&lt;education&gt;</span>
+            <div class="section-header" style="margin-top: 5rem;" data-reveal>
+                <span class="section-emoji">🎓</span>
                 <h2 class="section-title">Education</h2>
                 <div class="section-line"></div>
             </div>
-            <div class="education-card glass-card" data-animate="fade-up">
-                <div class="edu-icon">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                </div>
-                <div class="edu-content">
-                    <span class="edu-date">2020 — 2024</span>
-                    <h3 class="edu-title">Bachelor of Informatics Engineering</h3>
-                    <span class="edu-school">University of Brawijaya</span>
-                    <span class="edu-gpa">GPA: <strong>3.96</strong> / 4.00</span>
+            <div class="edu-card" data-reveal>
+                <div class="edu-emoji">🎓</div>
+                <div class="edu-info">
+                    <span class="date">2020 — 2024</span>
+                    <h3 class="degree">Bachelor of Informatics Engineering</h3>
+                    <span class="school">University of Brawijaya</span>
+                    <span class="gpa">GPA: <strong>3.96</strong> / 4.00</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section class="section" id="skills">
+    <!-- ═══ SKILLS ═══ Infinite scrolling marquee in 2 rows -->
+    <section class="section marquee-section" id="skills">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;skills&gt;</span>
+            <div class="section-header" data-reveal>
+                <span class="section-emoji">🎯</span>
                 <h2 class="section-title">Tech Stack</h2>
                 <div class="section-line"></div>
-                <p class="section-subtitle">Technologies I work with on a daily basis</p>
+                <p class="section-subtitle">Technologies I work with daily</p>
             </div>
-            <div class="skills-grid">
-                <a href="https://developer.android.com" class="skill-card glass-card" data-animate="fade-up" target="_blank">
-                    <div class="skill-icon">
-                        <img src="https://www.vectorlogo.zone/logos/android/android-icon.svg" alt="Android" loading="lazy">
-                    </div>
-                    <span class="skill-name">Android</span>
-                </a>
-                <a href="https://kotlinlang.org" class="skill-card glass-card" data-animate="fade-up" target="_blank">
-                    <div class="skill-icon">
-                        <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="Kotlin" loading="lazy">
-                    </div>
-                    <span class="skill-name">Kotlin</span>
-                </a>
-                <a href="https://www.jetbrains.com/compose-multiplatform/" class="skill-card glass-card" data-animate="fade-up" target="_blank">
-                    <div class="skill-icon">
-                        <img src="https://raw.githubusercontent.com/gilbarbara/logos/refs/heads/main/logos/compose-multiplatform.svg" alt="Compose Multiplatform" loading="lazy">
-                    </div>
-                    <span class="skill-name">Compose MP</span>
-                </a>
-                <a href="https://flutter.dev" class="skill-card glass-card" data-animate="fade-up" target="_blank">
-                    <div class="skill-icon">
-                        <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="Flutter" loading="lazy">
-                    </div>
-                    <span class="skill-name">Flutter</span>
-                </a>
-                <a href="https://firebase.google.com/" class="skill-card glass-card" data-animate="fade-up" target="_blank">
-                    <div class="skill-icon">
-                        <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase" loading="lazy">
-                    </div>
-                    <span class="skill-name">Firebase</span>
-                </a>
-                <a href="https://ktor.io" class="skill-card glass-card" data-animate="fade-up" target="_blank">
-                    <div class="skill-icon">
-                        <img src="https://raw.githubusercontent.com/gilbarbara/logos/refs/heads/main/logos/ktor-icon.svg" alt="Ktor" loading="lazy">
-                    </div>
-                    <span class="skill-name">Ktor</span>
-                </a>
-                <a href="https://www.postgresql.org" class="skill-card glass-card" data-animate="fade-up" target="_blank">
-                    <div class="skill-icon">
-                        <img src="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg" alt="PostgreSQL" loading="lazy">
-                    </div>
-                    <span class="skill-name">PostgreSQL</span>
-                </a>
-                <a href="https://www.tensorflow.org" class="skill-card glass-card" data-animate="fade-up" target="_blank">
-                    <div class="skill-icon">
-                        <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="TensorFlow" loading="lazy">
-                    </div>
-                    <span class="skill-name">TensorFlow</span>
-                </a>
+        </div>
+        <!-- Row 1: scrolls left -->
+        <div class="marquee-row">
+            <div class="marquee-track">
+                <a href="https://developer.android.com" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/android/android-icon.svg" alt="Android" loading="lazy"><span>Android</span></a>
+                <a href="https://kotlinlang.org" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="Kotlin" loading="lazy"><span>Kotlin</span></a>
+                <a href="https://www.jetbrains.com/compose-multiplatform/" class="skill-tag" target="_blank"><img src="https://raw.githubusercontent.com/gilbarbara/logos/refs/heads/main/logos/compose-multiplatform.svg" alt="Compose MP" loading="lazy"><span>Compose MP</span></a>
+                <a href="https://flutter.dev" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="Flutter" loading="lazy"><span>Flutter</span></a>
+                <a href="https://firebase.google.com/" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase" loading="lazy"><span>Firebase</span></a>
+                <a href="https://ktor.io" class="skill-tag" target="_blank"><img src="https://raw.githubusercontent.com/gilbarbara/logos/refs/heads/main/logos/ktor-icon.svg" alt="Ktor" loading="lazy"><span>Ktor</span></a>
+                <a href="https://www.postgresql.org" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg" alt="PostgreSQL" loading="lazy"><span>PostgreSQL</span></a>
+                <a href="https://www.tensorflow.org" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="TensorFlow" loading="lazy"><span>TensorFlow</span></a>
+                <!-- Duplicate for seamless loop -->
+                <a href="https://developer.android.com" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/android/android-icon.svg" alt="Android" loading="lazy"><span>Android</span></a>
+                <a href="https://kotlinlang.org" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="Kotlin" loading="lazy"><span>Kotlin</span></a>
+                <a href="https://www.jetbrains.com/compose-multiplatform/" class="skill-tag" target="_blank"><img src="https://raw.githubusercontent.com/gilbarbara/logos/refs/heads/main/logos/compose-multiplatform.svg" alt="Compose MP" loading="lazy"><span>Compose MP</span></a>
+                <a href="https://flutter.dev" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="Flutter" loading="lazy"><span>Flutter</span></a>
+                <a href="https://firebase.google.com/" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase" loading="lazy"><span>Firebase</span></a>
+                <a href="https://ktor.io" class="skill-tag" target="_blank"><img src="https://raw.githubusercontent.com/gilbarbara/logos/refs/heads/main/logos/ktor-icon.svg" alt="Ktor" loading="lazy"><span>Ktor</span></a>
+                <a href="https://www.postgresql.org" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg" alt="PostgreSQL" loading="lazy"><span>PostgreSQL</span></a>
+                <a href="https://www.tensorflow.org" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="TensorFlow" loading="lazy"><span>TensorFlow</span></a>
+            </div>
+        </div>
+        <!-- Row 2: scrolls right -->
+        <div class="marquee-row">
+            <div class="marquee-track reverse">
+                <a href="https://www.tensorflow.org" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="TensorFlow" loading="lazy"><span>TensorFlow</span></a>
+                <a href="https://www.postgresql.org" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg" alt="PostgreSQL" loading="lazy"><span>PostgreSQL</span></a>
+                <a href="https://ktor.io" class="skill-tag" target="_blank"><img src="https://raw.githubusercontent.com/gilbarbara/logos/refs/heads/main/logos/ktor-icon.svg" alt="Ktor" loading="lazy"><span>Ktor</span></a>
+                <a href="https://firebase.google.com/" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase" loading="lazy"><span>Firebase</span></a>
+                <a href="https://flutter.dev" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="Flutter" loading="lazy"><span>Flutter</span></a>
+                <a href="https://www.jetbrains.com/compose-multiplatform/" class="skill-tag" target="_blank"><img src="https://raw.githubusercontent.com/gilbarbara/logos/refs/heads/main/logos/compose-multiplatform.svg" alt="Compose MP" loading="lazy"><span>Compose MP</span></a>
+                <a href="https://kotlinlang.org" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="Kotlin" loading="lazy"><span>Kotlin</span></a>
+                <a href="https://developer.android.com" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/android/android-icon.svg" alt="Android" loading="lazy"><span>Android</span></a>
+                <!-- Duplicate for seamless loop -->
+                <a href="https://www.tensorflow.org" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="TensorFlow" loading="lazy"><span>TensorFlow</span></a>
+                <a href="https://www.postgresql.org" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg" alt="PostgreSQL" loading="lazy"><span>PostgreSQL</span></a>
+                <a href="https://ktor.io" class="skill-tag" target="_blank"><img src="https://raw.githubusercontent.com/gilbarbara/logos/refs/heads/main/logos/ktor-icon.svg" alt="Ktor" loading="lazy"><span>Ktor</span></a>
+                <a href="https://firebase.google.com/" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase" loading="lazy"><span>Firebase</span></a>
+                <a href="https://flutter.dev" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="Flutter" loading="lazy"><span>Flutter</span></a>
+                <a href="https://www.jetbrains.com/compose-multiplatform/" class="skill-tag" target="_blank"><img src="https://raw.githubusercontent.com/gilbarbara/logos/refs/heads/main/logos/compose-multiplatform.svg" alt="Compose MP" loading="lazy"><span>Compose MP</span></a>
+                <a href="https://kotlinlang.org" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="Kotlin" loading="lazy"><span>Kotlin</span></a>
+                <a href="https://developer.android.com" class="skill-tag" target="_blank"><img src="https://www.vectorlogo.zone/logos/android/android-icon.svg" alt="Android" loading="lazy"><span>Android</span></a>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- ═══ PROJECTS ═══ Bento grid (first item large) -->
     <section class="section" id="projects">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;projects&gt;</span>
+            <div class="section-header" data-reveal>
+                <span class="section-emoji">🚀</span>
                 <h2 class="section-title">My Projects</h2>
                 <div class="section-line"></div>
                 <p class="section-subtitle">High quality product brings happiness to you and others</p>
             </div>
-            <div class="projects-grid">
-                <!-- SoulMath -->
-                <div class="project-card glass-card" data-animate="fade-up">
-                    <div class="project-image">
+            <div class="bento-grid">
+                <!-- Featured: SoulMath -->
+                <div class="project-card" data-reveal>
+                    <div class="project-img">
                         <img src="images/soulmath.webp" alt="SoulMath" loading="lazy">
-                        <div class="project-overlay">
-                            <span class="project-type">Mobile App</span>
-                        </div>
+                        <span class="project-tag">Mobile App</span>
                     </div>
-                    <div class="project-info">
+                    <div class="project-body">
                         <h3 class="project-name">SoulMath</h3>
-                        <div class="project-links">
-                            <a href="https://play.google.com/store/apps/details?id=com.ramiyon.soulmath_v3&hl=id" target="_blank" class="store-badge">
-                                <img src="images/available_playstore.webp" alt="Play Store">
-                            </a>
+                        <div class="project-badges">
+                            <a href="https://play.google.com/store/apps/details?id=com.ramiyon.soulmath_v3&hl=id" target="_blank"><img src="images/available_playstore.webp" alt="Play Store"></a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Beu -->
-                <div class="project-card glass-card" data-animate="fade-up">
-                    <div class="project-image">
+                <div class="project-card" data-reveal>
+                    <div class="project-img">
                         <img src="images/beu.webp" alt="Beu" loading="lazy">
-                        <div class="project-overlay">
-                            <span class="project-type">Mobile App</span>
-                        </div>
+                        <span class="project-tag">Mobile App</span>
                     </div>
-                    <div class="project-info">
+                    <div class="project-body">
                         <h3 class="project-name">Beu</h3>
-                        <div class="project-links">
-                            <a href="https://cookwithbeu.web.id" target="_blank" class="store-badge">
-                                <img src="images/available_beu.webp" alt="Website">
-                            </a>
-                        </div>
+                        <div class="project-badges"><a href="https://cookwithbeu.web.id" target="_blank"><img src="images/available_beu.webp" alt="Website"></a></div>
                     </div>
                 </div>
 
-                <!-- Dopalearn -->
-                <div class="project-card glass-card" data-animate="fade-up">
-                    <div class="project-image">
+                <div class="project-card" data-reveal>
+                    <div class="project-img">
                         <img src="images/dopalearn.webp" alt="Dopalearn" loading="lazy">
-                        <div class="project-overlay">
-                            <span class="project-type">Mobile App</span>
-                        </div>
+                        <span class="project-tag">Mobile App</span>
                     </div>
-                    <div class="project-info">
+                    <div class="project-body">
                         <h3 class="project-name">Dopalearn</h3>
-                        <div class="project-links">
-                            <a href="https://play.google.com/store/apps/details?id=com.littlebrainboosters.dopalearn" target="_blank" class="store-badge">
-                                <img src="images/available_playstore.webp" alt="Play Store">
-                            </a>
-                            <a href="https://apps.apple.com/id/app/dopalearn/id1542507323" target="_blank" class="store-badge">
-                                <img src="images/available_appstore.webp" alt="App Store">
-                            </a>
+                        <div class="project-badges">
+                            <a href="https://play.google.com/store/apps/details?id=com.littlebrainboosters.dopalearn" target="_blank"><img src="images/available_playstore.webp" alt="Play Store"></a>
+                            <a href="https://apps.apple.com/id/app/dopalearn/id1542507323" target="_blank"><img src="images/available_appstore.webp" alt="App Store"></a>
                         </div>
                     </div>
                 </div>
 
-                <!-- PondPedia -->
-                <div class="project-card glass-card" data-animate="fade-up">
-                    <div class="project-image">
+                <div class="project-card" data-reveal>
+                    <div class="project-img">
                         <img src="images/pondpedia.webp" alt="PondPedia" loading="lazy">
-                        <div class="project-overlay">
-                            <span class="project-type">Mobile App</span>
-                        </div>
+                        <span class="project-tag">Mobile App</span>
                     </div>
-                    <div class="project-info">
+                    <div class="project-body">
                         <h3 class="project-name">PondPedia</h3>
-                        <div class="project-links">
-                            <a href="https://play.google.com/store/apps/details?id=com.pondpedia.android.pondpedia" target="_blank" class="store-badge">
-                                <img src="images/available_playstore.webp" alt="Play Store">
-                            </a>
-                        </div>
+                        <div class="project-badges"><a href="https://play.google.com/store/apps/details?id=com.pondpedia.android.pondpedia" target="_blank"><img src="images/available_playstore.webp" alt="Play Store"></a></div>
                     </div>
                 </div>
 
-                <!-- SurveyAsia -->
-                <div class="project-card glass-card" data-animate="fade-up">
-                    <div class="project-image">
+                <div class="project-card" data-reveal>
+                    <div class="project-img">
                         <img src="images/surveyasia.webp" alt="SurveyAsia" loading="lazy">
-                        <div class="project-overlay">
-                            <span class="project-type">Mobile App</span>
-                        </div>
+                        <span class="project-tag">Mobile App</span>
                     </div>
-                    <div class="project-info">
+                    <div class="project-body">
                         <h3 class="project-name">SurveyAsia</h3>
-                        <div class="project-links">
-                            <a href="https://play.google.com/store/apps/details?id=com.citiasia.survei_asia" target="_blank" class="store-badge">
-                                <img src="images/available_playstore.webp" alt="Play Store">
-                            </a>
-                        </div>
+                        <div class="project-badges"><a href="https://play.google.com/store/apps/details?id=com.citiasia.survei_asia" target="_blank"><img src="images/available_playstore.webp" alt="Play Store"></a></div>
                     </div>
                 </div>
 
-                <!-- Firetor -->
-                <div class="project-card glass-card" data-animate="fade-up">
-                    <div class="project-image">
+                <div class="project-card" data-reveal>
+                    <div class="project-img">
                         <img src="images/firetor.webp" alt="Firetor" loading="lazy">
-                        <div class="project-overlay">
-                            <span class="project-type">Library</span>
-                        </div>
+                        <span class="project-tag">Library</span>
                     </div>
-                    <div class="project-info">
+                    <div class="project-body">
                         <h3 class="project-name">Firetor</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/kylixeza/firetor" target="_blank" class="store-badge">
-                                <img src="images/available_github.webp" alt="GitHub">
-                            </a>
-                        </div>
+                        <div class="project-badges"><a href="https://github.com/kylixeza/firetor" target="_blank"><img src="images/available_github.webp" alt="GitHub"></a></div>
                     </div>
                 </div>
 
-                <!-- Nembayu -->
-                <div class="project-card glass-card" data-animate="fade-up">
-                    <div class="project-image">
+                <div class="project-card" data-reveal>
+                    <div class="project-img">
                         <img src="images/nembayu.webp" alt="Nembayu" loading="lazy">
-                        <div class="project-overlay">
-                            <span class="project-type">Mobile App</span>
-                        </div>
+                        <span class="project-tag">Mobile App</span>
                     </div>
-                    <div class="project-info">
+                    <div class="project-body">
                         <h3 class="project-name">Nembayu</h3>
-                        <div class="project-links">
-                            <a href="#" class="store-badge">
-                                <img src="images/available_playstore.webp" alt="Play Store">
-                            </a>
-                            <a href="https://apps.apple.com/id/app/nembayu/id6444177178" target="_blank" class="store-badge">
-                                <img src="images/available_appstore.webp" alt="App Store">
-                            </a>
+                        <div class="project-badges">
+                            <a href="#"><img src="images/available_playstore.webp" alt="Play Store"></a>
+                            <a href="https://apps.apple.com/id/app/nembayu/id6444177178" target="_blank"><img src="images/available_appstore.webp" alt="App Store"></a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Slamet -->
-                <div class="project-card glass-card" data-animate="fade-up">
-                    <div class="project-image">
+                <div class="project-card" data-reveal>
+                    <div class="project-img">
                         <img src="images/slamet.webp" alt="Slamet" loading="lazy">
-                        <div class="project-overlay">
-                            <span class="project-type">Mobile App</span>
-                        </div>
+                        <span class="project-tag">Mobile App</span>
                     </div>
-                    <div class="project-info">
+                    <div class="project-body">
                         <h3 class="project-name">Slamet</h3>
-                        <div class="project-links">
-                            <a href="https://play.google.com/store/apps/details?id=id.pammineral.slamet&pcampaignid=web_share" target="_blank" class="store-badge">
-                                <img src="images/available_playstore.webp" alt="Play Store">
-                            </a>
-                            <a href="https://apps.apple.com/id/app/slamet/id6670607085" target="_blank" class="store-badge">
-                                <img src="images/available_appstore.webp" alt="App Store">
-                            </a>
+                        <div class="project-badges">
+                            <a href="https://play.google.com/store/apps/details?id=id.pammineral.slamet&pcampaignid=web_share" target="_blank"><img src="images/available_playstore.webp" alt="Play Store"></a>
+                            <a href="https://apps.apple.com/id/app/slamet/id6670607085" target="_blank"><img src="images/available_appstore.webp" alt="App Store"></a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Semar -->
-                <div class="project-card glass-card" data-animate="fade-up">
-                    <div class="project-image">
+                <div class="project-card" data-reveal>
+                    <div class="project-img">
                         <img src="images/semar.webp" alt="Semar" loading="lazy">
-                        <div class="project-overlay">
-                            <span class="project-type">Mobile App</span>
-                        </div>
+                        <span class="project-tag">Mobile App</span>
                     </div>
-                    <div class="project-info">
+                    <div class="project-body">
                         <h3 class="project-name">Semar</h3>
-                        <div class="project-links">
-                            <a href="https://play.google.com/store/apps/details?id=com.indokordsa.app&pcampaignid=web_share" target="_blank" class="store-badge">
-                                <img src="images/available_playstore.webp" alt="Play Store">
-                            </a>
-                            <a href="https://apps.apple.com/id/app/semar/id6446005830" target="_blank" class="store-badge">
-                                <img src="images/available_appstore.webp" alt="App Store">
-                            </a>
+                        <div class="project-badges">
+                            <a href="https://play.google.com/store/apps/details?id=com.indokordsa.app&pcampaignid=web_share" target="_blank"><img src="images/available_playstore.webp" alt="Play Store"></a>
+                            <a href="https://apps.apple.com/id/app/semar/id6446005830" target="_blank"><img src="images/available_appstore.webp" alt="App Store"></a>
                         </div>
                     </div>
                 </div>
@@ -534,257 +401,211 @@
         </div>
     </section>
 
-    <!-- Awards Section -->
+    <!-- ═══ AWARDS ═══ Horizontal scroll shelf -->
     <section class="section" id="awards">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;awards&gt;</span>
+            <div class="section-header" data-reveal>
+                <span class="section-emoji">🏆</span>
                 <h2 class="section-title">Awards & Achievements</h2>
                 <div class="section-line"></div>
             </div>
-            <div class="awards-grid">
-                <div class="award-card glass-card" data-animate="fade-up">
-                    <div class="award-icon"><i class="fa-solid fa-trophy"></i></div>
-                    <div class="award-content">
-                        <span class="award-year">2021</span>
+            <div class="awards-scroll-wrapper" data-reveal>
+                <div class="awards-scroll">
+                    <a href="https://storage.googleapis.com/kylix_portfolio_bucket/awards/%5B1st%20Winner%20IFEST%202021%5D_KYLIX%20EZA%20SAPUTRA.pdf" target="_blank" class="award-tile">
+                        <div class="emoji">🏆</div>
+                        <span class="year">2021</span>
                         <h3>1st Winner INTENTION (App & Web Dev) IFEST</h3>
-                        <span class="award-org">University of Padjajaran</span>
-                    </div>
-                    <a href="https://storage.googleapis.com/kylix_portfolio_bucket/awards/%5B1st%20Winner%20IFEST%202021%5D_KYLIX%20EZA%20SAPUTRA.pdf" target="_blank" class="award-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <span class="org">University of Padjajaran</span>
+                        <div class="link-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
                     </a>
-                </div>
 
-                <div class="award-card glass-card" data-animate="fade-up">
-                    <div class="award-icon"><i class="fa-solid fa-trophy"></i></div>
-                    <div class="award-content">
-                        <span class="award-year">2022</span>
+                    <a href="https://storage.googleapis.com/kylix_portfolio_bucket/awards/%5B1st%20Winner%20HOLOGY%202022%5D_KYLIX%20EZA%20SAPUTRA.pdf" target="_blank" class="award-tile">
+                        <div class="emoji">🏆</div>
+                        <span class="year">2022</span>
                         <h3>1st Winner App Innovation HOLOGY 5.0</h3>
-                        <span class="award-org">University of Brawijaya</span>
-                    </div>
-                    <a href="https://storage.googleapis.com/kylix_portfolio_bucket/awards/%5B1st%20Winner%20HOLOGY%202022%5D_KYLIX%20EZA%20SAPUTRA.pdf" target="_blank" class="award-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <span class="org">University of Brawijaya</span>
+                        <div class="link-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
                     </a>
-                </div>
 
-                <div class="award-card glass-card" data-animate="fade-up">
-                    <div class="award-icon"><i class="fa-solid fa-medal"></i></div>
-                    <div class="award-content">
-                        <span class="award-year">2022</span>
+                    <a href="https://storage.googleapis.com/kylix_portfolio_bucket/awards/%5BVarsity%20Hackathon%20USM%202021%20TOP%2015%5D_KYLIX%20EZA%20SAPUTRA.pdf" target="_blank" class="award-tile">
+                        <div class="emoji">🥉</div>
+                        <span class="year">2022</span>
                         <h3>9th Place Varsity Hackathon</h3>
-                        <span class="award-org">University Sains Malaysia</span>
-                    </div>
-                    <a href="https://storage.googleapis.com/kylix_portfolio_bucket/awards/%5BVarsity%20Hackathon%20USM%202021%20TOP%2015%5D_KYLIX%20EZA%20SAPUTRA.pdf" target="_blank" class="award-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <span class="org">University Sains Malaysia</span>
+                        <div class="link-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
                     </a>
-                </div>
 
-                <div class="award-card glass-card" data-animate="fade-up">
-                    <div class="award-icon"><i class="fa-solid fa-medal"></i></div>
-                    <div class="award-content">
-                        <span class="award-year">2022</span>
+                    <a href="https://storage.googleapis.com/kylix_portfolio_bucket/awards/%5B3rd%20Place%208th%20Closer%20Hackathon%20Telkom%20University%202022%5D_KYLIX%20EZA%20SAPUTRA.pdf" target="_blank" class="award-tile">
+                        <div class="emoji">🥉</div>
+                        <span class="year">2022</span>
                         <h3>3rd Place at 8th Close Hackathon</h3>
-                        <span class="award-org">Telkom University</span>
-                    </div>
-                    <a href="https://storage.googleapis.com/kylix_portfolio_bucket/awards/%5B3rd%20Place%208th%20Closer%20Hackathon%20Telkom%20University%202022%5D_KYLIX%20EZA%20SAPUTRA.pdf" target="_blank" class="award-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <span class="org">Telkom University</span>
+                        <div class="link-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
                     </a>
-                </div>
 
-                <div class="award-card glass-card" data-animate="fade-up">
-                    <div class="award-icon award-icon-gold"><i class="fa-solid fa-star"></i></div>
-                    <div class="award-content">
-                        <span class="award-year">2024</span>
+                    <a href="https://www.linkedin.com/posts/kylixezasaputra_one-journey-finished-new-path-unlocked-activity-7239093981861531649-2qAz" target="_blank" class="award-tile">
+                        <div class="emoji">⭐</div>
+                        <span class="year">2024</span>
                         <h3>Best Graduates of Yudisium Filkom Period XI 2023/2024</h3>
-                        <span class="award-org">Faculty of Computer Science, University of Brawijaya</span>
-                    </div>
-                    <a href="https://www.linkedin.com/posts/kylixezasaputra_one-journey-finished-new-path-unlocked-activity-7239093981861531649-2qAz" target="_blank" class="award-link">
-                        <i class="fa-brands fa-linkedin-in"></i>
+                        <span class="org">Faculty of CS — University of Brawijaya</span>
+                        <div class="link-icon"><i class="fa-brands fa-linkedin-in"></i></div>
                     </a>
-                </div>
 
-                <div class="award-card glass-card" data-animate="fade-up">
-                    <div class="award-icon award-icon-gold"><i class="fa-solid fa-star"></i></div>
-                    <div class="award-content">
-                        <span class="award-year">2024</span>
+                    <a href="https://www.linkedin.com/posts/kylixezasaputra_graduation-hello-fellas-i-dont-know-activity-7277152258096513026-NeGr" target="_blank" class="award-tile">
+                        <div class="emoji">⭐</div>
+                        <span class="year">2024</span>
                         <h3>Best Graduates of UB Graduation Period XII 2024/2025</h3>
-                        <span class="award-org">University of Brawijaya</span>
-                    </div>
-                    <a href="https://www.linkedin.com/posts/kylixezasaputra_graduation-hello-fellas-i-dont-know-activity-7277152258096513026-NeGr" target="_blank" class="award-link">
-                        <i class="fa-brands fa-linkedin-in"></i>
+                        <span class="org">University of Brawijaya</span>
+                        <div class="link-icon"><i class="fa-brands fa-linkedin-in"></i></div>
                     </a>
                 </div>
+                <p class="scroll-hint">Drag to explore <i class="fa-solid fa-arrow-right"></i></p>
             </div>
 
-            <!-- Others (Certifications / Patents / Publications) -->
-            <div class="section-header" style="margin-top: 4rem;">
-                <span class="section-tag">&lt;others&gt;</span>
+            <!-- Certifications -->
+            <div class="section-header" style="margin-top: 5rem;" data-reveal>
+                <span class="section-emoji">📜</span>
                 <h2 class="section-title">Certifications & Publications</h2>
                 <div class="section-line"></div>
             </div>
-            <div class="others-grid">
-                <div class="other-card glass-card" data-animate="fade-up">
-                    <div class="other-icon"><i class="fa-solid fa-certificate"></i></div>
-                    <div class="other-content">
-                        <span class="other-year">2022</span>
-                        <h3>Google Certified Associate Android Developer</h3>
-                        <span class="other-org">Google Developers · Certification</span>
-                        <p>The Associate Android Developer Certification is a performance-based exam where developers write real apps to show their skills.</p>
-                    </div>
-                    <a href="https://www.credential.net/cc14d1ac-f6fb-46d5-8c17-9850b1d304bc" target="_blank" class="btn-small">
-                        View <i class="fa-solid fa-arrow-right"></i>
-                    </a>
+            <div class="certs-grid">
+                <div class="cert-card" data-reveal>
+                    <div class="emoji">🎖️</div>
+                    <span class="year">2022</span>
+                    <h3>Google Certified Associate Android Developer</h3>
+                    <span class="org">Google Developers · Certification</span>
+                    <p>The Associate Android Developer Certification is a performance-based exam where developers write real apps to show their skills.</p>
+                    <a href="https://www.credential.net/cc14d1ac-f6fb-46d5-8c17-9850b1d304bc" target="_blank" class="btn-sm">View <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
-                <div class="other-card glass-card" data-animate="fade-up">
-                    <div class="other-icon"><i class="fa-solid fa-scroll"></i></div>
-                    <div class="other-content">
-                        <span class="other-year">2023</span>
-                        <h3>SoulMath — Patent</h3>
-                        <span class="other-org">Ministry of Law and Human Rights Indonesia</span>
-                        <p>A mobile application to help students learn mathematics more fun, with features like video player, adaptive quiz, games, daily XP, and leaderboard.</p>
-                    </div>
-                    <a href="https://drive.google.com/file/d/1dPQjRZfaZ3zstNcghVf96l50oKQu8crz/view?usp=sharing" target="_blank" class="btn-small">
-                        View <i class="fa-solid fa-arrow-right"></i>
-                    </a>
+                <div class="cert-card" data-reveal>
+                    <div class="emoji">📋</div>
+                    <span class="year">2023</span>
+                    <h3>SoulMath — Patent</h3>
+                    <span class="org">Ministry of Law and Human Rights Indonesia</span>
+                    <p>A mobile application to help students learn mathematics more fun, with features like video player, adaptive quiz, games, daily XP, and leaderboard.</p>
+                    <a href="https://drive.google.com/file/d/1dPQjRZfaZ3zstNcghVf96l50oKQu8crz/view?usp=sharing" target="_blank" class="btn-sm">View <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
-                <div class="other-card glass-card" data-animate="fade-up">
-                    <div class="other-icon"><i class="fa-solid fa-book-open"></i></div>
-                    <div class="other-content">
-                        <span class="other-year">2024</span>
-                        <h3>Mobile Application for Cuisine Recipe Guide Using Image Classification</h3>
-                        <span class="other-org">J-PTIIK · Journal Publication</span>
-                        <p>Android-based recipe guide application using image classification, achieving 94% ML accuracy and SUS score of 92.</p>
-                    </div>
-                    <a href="https://j-ptiik.ub.ac.id/index.php/j-ptiik/article/view/13913" target="_blank" class="btn-small">
-                        View <i class="fa-solid fa-arrow-right"></i>
-                    </a>
+                <div class="cert-card" data-reveal>
+                    <div class="emoji">📚</div>
+                    <span class="year">2024</span>
+                    <h3>Mobile Application for Cuisine Recipe Guide Using Image Classification</h3>
+                    <span class="org">J-PTIIK · Journal Publication</span>
+                    <p>Android-based recipe guide application using image classification, achieving 94% ML accuracy and SUS score of 92.</p>
+                    <a href="https://j-ptiik.ub.ac.id/index.php/j-ptiik/article/view/13913" target="_blank" class="btn-sm">View <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- News Section -->
+    <!-- ═══ NEWS ═══ -->
     <section class="section" id="news">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;news&gt;</span>
+            <div class="section-header" data-reveal>
+                <span class="section-emoji">📰</span>
                 <h2 class="section-title">In The News</h2>
                 <div class="section-line"></div>
                 <p class="section-subtitle">Some news that mentions me</p>
             </div>
-            <div class="news-grid">
-                <a href="https://medium.com/developer-student-club-universitas-brawijaya/gdsc-ub-2021-the-threshold-of-a-new-age-154496f6916e" target="_blank" class="news-card glass-card" data-animate="fade-up">
-                    <div class="news-image-wrap">
-                        <img src="images/news_1.webp" alt="GDSC UB 2021" loading="lazy">
-                    </div>
-                    <div class="news-body">
+            <div class="news-layout">
+                <a href="https://medium.com/developer-student-club-universitas-brawijaya/gdsc-ub-2021-the-threshold-of-a-new-age-154496f6916e" target="_blank" class="news-item" data-reveal>
+                    <div class="news-thumb"><img src="images/news_1.webp" alt="GDSC UB 2021" loading="lazy"></div>
+                    <div class="news-content">
                         <h3>GDSC UB 2021: The Threshold of a New Age</h3>
                         <p>TechSeries Workshop talking about KOTLIN 101 with Android Learning Development, Kylix Eza Saputra.</p>
-                        <span class="news-meta">
-                            <i class="fa-regular fa-calendar"></i>
-                            Nov 17, 2021 · GDSC UB Medium
-                        </span>
+                        <span class="news-date"><i class="fa-regular fa-calendar"></i> Nov 17, 2021 · GDSC UB Medium</span>
                     </div>
                 </a>
-
-                <a href="https://prasetya.ub.ac.id/kenalkan-google-solution-challenge-pada-mahasiswa-filkom-gdsc-ub-selenggarakan-info-session/" target="_blank" class="news-card glass-card" data-animate="fade-up">
-                    <div class="news-image-wrap">
-                        <img src="images/news_2.webp" alt="Google Solution Challenge" loading="lazy">
-                    </div>
-                    <div class="news-body">
+                <a href="https://prasetya.ub.ac.id/kenalkan-google-solution-challenge-pada-mahasiswa-filkom-gdsc-ub-selenggarakan-info-session/" target="_blank" class="news-item" data-reveal>
+                    <div class="news-thumb"><img src="images/news_2.webp" alt="Google Solution Challenge" loading="lazy"></div>
+                    <div class="news-content">
                         <h3>Kenalkan Google Solution Challenge Pada Mahasiswa</h3>
                         <p>GDSC mengundang Kylix Eza Saputra selaku Curriculum Lead GDSC UB yang menjelaskan timeline Google Solution Challenge 2023.</p>
-                        <span class="news-meta">
-                            <i class="fa-regular fa-calendar"></i>
-                            Jan 30, 2023 · Prasetya UB
-                        </span>
+                        <span class="news-date"><i class="fa-regular fa-calendar"></i> Jan 30, 2023 · Prasetya UB</span>
                     </div>
                 </a>
-
-                <a href="https://prasetya.ub.ac.id/filkom-ub-hasilkan-aplikasi-untuk-pembelajaran-anak-berkebutuhan-khusus-abk-tunagrahita-di-smkn-2-malang/" target="_blank" class="news-card glass-card" data-animate="fade-up">
-                    <div class="news-image-wrap">
-                        <img src="images/news_3.webp" alt="SoulMath ABK" loading="lazy">
-                    </div>
-                    <div class="news-body">
+                <a href="https://prasetya.ub.ac.id/filkom-ub-hasilkan-aplikasi-untuk-pembelajaran-anak-berkebutuhan-khusus-abk-tunagrahita-di-smkn-2-malang/" target="_blank" class="news-item" data-reveal>
+                    <div class="news-thumb"><img src="images/news_3.webp" alt="SoulMath ABK" loading="lazy"></div>
+                    <div class="news-content">
                         <h3>FILKOM Buat Aplikasi Pembelajaran ABK Tunagrahita</h3>
                         <p>Aplikasi pembelajaran SoulMath yang dikembangkan khusus untuk membantu siswa ABK Tunagrahita.</p>
-                        <span class="news-meta">
-                            <i class="fa-regular fa-calendar"></i>
-                            Nov 06, 2023 · Prasetya UB
-                        </span>
+                        <span class="news-date"><i class="fa-regular fa-calendar"></i> Nov 06, 2023 · Prasetya UB</span>
                     </div>
                 </a>
-
-                <a href="https://www.detik.com/edu/edutainment/d-7700021/terinspirasi-ibu-jualan-soto-alumnus-top-ub-ini-buat-aplikasi-kuliner-nusantara" target="_blank" class="news-card glass-card" data-animate="fade-up">
-                    <div class="news-image-wrap">
-                        <img src="images/news_4.webp" alt="Detik Edu" loading="lazy">
-                    </div>
-                    <div class="news-body">
+                <a href="https://www.detik.com/edu/edutainment/d-7700021/terinspirasi-ibu-jualan-soto-alumnus-top-ub-ini-buat-aplikasi-kuliner-nusantara" target="_blank" class="news-item" data-reveal>
+                    <div class="news-thumb"><img src="images/news_4.webp" alt="Detik Edu" loading="lazy"></div>
+                    <div class="news-content">
                         <h3>Terinspirasi Ibu Jualan Soto, Alumnus Top UB Buat Aplikasi Kuliner</h3>
                         <p>Perjuangan ibu berjualan soto rupanya memberikan inspirasi berkarya bagi Kylix Eza Saputra.</p>
-                        <span class="news-meta">
-                            <i class="fa-regular fa-calendar"></i>
-                            Dec 23, 2024 · Detik Edu
-                        </span>
+                        <span class="news-date"><i class="fa-regular fa-calendar"></i> Dec 23, 2024 · Detik Edu</span>
                     </div>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- ═══ CONTACT ═══ Warm gradient CTA block -->
     <section class="section" id="contact">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;contact&gt;</span>
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="section-line"></div>
-                <p class="section-subtitle">Feel free to reach out — let's create something amazing together</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-card glass-card" data-animate="fade-up">
-                    <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
-                    <h3>Location</h3>
-                    <p>Jakarta, Indonesia</p>
+            <div class="contact-block" data-reveal="scale">
+                <h2 class="contact-heading">Let's build something awesome 🤝</h2>
+                <p class="contact-sub">Feel free to reach out. I'm always happy to chat!</p>
+                <div class="contact-layout">
+                    <div class="contact-info-col">
+                        <div class="contact-tile">
+                            <div class="emoji">📍</div>
+                            <h3>Location</h3>
+                            <p>Jakarta, Indonesia</p>
+                        </div>
+                        <a href="tel://+6288805594697" class="contact-tile">
+                            <div class="emoji">📞</div>
+                            <h3>Phone</h3>
+                            <p>+62 888 0559 4697</p>
+                        </a>
+                        <a href="mailto:kylixeza.dev@gmail.com" class="contact-tile">
+                            <div class="emoji">✉️</div>
+                            <h3>Email</h3>
+                            <p>kylixeza.dev@gmail.com</p>
+                        </a>
+                        <a href="https://www.linkedin.com/in/kylixezasaputra/" target="_blank" class="contact-tile">
+                            <div class="emoji">💼</div>
+                            <h3>LinkedIn</h3>
+                            <p>Connect with me!</p>
+                        </a>
+                    </div>
+                    
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="What's your name?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" class="form-control" placeholder="How can I help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-fill" id="submit-btn" style="width: 100%; justify-content: center; margin-top: 8px;">
+                            <span>Send Message</span> <i class="fa-solid fa-paper-plane" style="margin-left: 8px;"></i>
+                        </button>
+                    </form>
                 </div>
-                <a href="tel://+6288805594697" class="contact-card glass-card" data-animate="fade-up">
-                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
-                    <h3>Phone</h3>
-                    <p>+62 888 0559 4697</p>
-                </a>
-                <a href="mailto:kylixeza.dev@gmail.com" class="contact-card glass-card" data-animate="fade-up">
-                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-                    <h3>Email</h3>
-                    <p>kylixeza.dev@gmail.com</p>
-                </a>
-                <a href="https://www.linkedin.com/in/kylixezasaputra/" target="_blank" class="contact-card glass-card" data-animate="fade-up">
-                    <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
-                    <h3>LinkedIn</h3>
-                    <p>Connect with me!</p>
-                </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ═══ FOOTER ═══ -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <a href="#hero" class="footer-logo">
-                    <span class="logo-bracket">&lt;</span>Kylix<span class="logo-bracket">/&gt;</span>
-                </a>
-                <p class="footer-text">
-                    Designed & Built with <i class="fa-solid fa-heart" style="color: var(--accent-primary);"></i> by Kylix Eza Saputra
-                </p>
-                <p class="footer-copyright">
-                    &copy; <span id="footer-year"></span> All rights reserved.
-                </p>
-            </div>
+            <a href="#hero" class="footer-logo">Kylix<span class="dot">.</span></a>
+            <p>Made with ❤️ and lots of ☕ by Kylix Eza Saputra</p>
+            <p class="copy">&copy; <span id="footer-year"></span> All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="js/futuristic.js"></script>
+    <script src="js/sunshine.js"></script>
 </body>
 </html>

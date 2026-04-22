@@ -1,9 +1,11 @@
 package com.kylix
 
+import com.kylix.models.ContactRequest
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.http.content.*
 import io.ktor.server.plugins.statuspages.*
+import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 
@@ -23,6 +25,24 @@ fun Application.configureRouting() {
         staticResources("/for-amanda", "happybirthday", index = "index.html")
         get("/for-amanda") {
             call.respondRedirect("/for-amanda/index.html")
+        }
+
+        post("/api/contact") {
+            try {
+                val request = call.receive<ContactRequest>()
+                val success = EmailService.sendEmail(
+                    name = request.name,
+                    replyTo = request.email,
+                    message = request.message
+                )
+                if (success) {
+                    call.respond(HttpStatusCode.OK, mapOf("status" to "success", "message" to "Message sent successfully"))
+                } else {
+                    call.respond(HttpStatusCode.InternalServerError, mapOf("status" to "error", "message" to "Failed to send message via email server"))
+                }
+            } catch (e: Exception) {
+                call.respond(HttpStatusCode.BadRequest, mapOf("status" to "error", "message" to "Invalid request payload"))
+            }
         }
     }
 }
