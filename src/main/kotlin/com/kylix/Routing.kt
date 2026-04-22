@@ -36,12 +36,12 @@ fun Application.configureRouting() {
                     message = request.message
                 )
                 if (success) {
-                    call.respond(HttpStatusCode.OK, mapOf("status" to "success", "message" to "Message sent successfully"))
+                    call.respond(HttpStatusCode.OK, mapOf("status" to "success", "title" to "Awesome! 🚀", "message" to "Thanks for reaching out! I'll get back to you as soon as possible. Have a great day!"))
                 } else {
-                    call.respond(HttpStatusCode.InternalServerError, mapOf("status" to "error", "message" to "Failed to send message via email server"))
+                    call.respond(HttpStatusCode.InternalServerError, mapOf("status" to "error", "title" to "Oops! 😥", "message" to "Failed to send message. Please try again later or contact me via LinkedIn."))
                 }
             } catch (e: Exception) {
-                call.respond(HttpStatusCode.BadRequest, mapOf("status" to "error", "message" to "Invalid request payload"))
+                call.respond(HttpStatusCode.BadRequest, mapOf("status" to "error", "title" to "Error", "message" to "Invalid request payload"))
             }
         }
     }

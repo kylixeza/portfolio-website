@@ -235,6 +235,33 @@
         init() {
             const form = document.getElementById('contact-form');
             if (!form) return;
+            
+            const modal = document.getElementById('response-modal');
+            const modalCloseBtn = document.getElementById('modal-close-btn');
+            const modalOkBtn = document.getElementById('modal-ok-btn');
+            const modalTitle = document.getElementById('modal-title');
+            const modalText = document.getElementById('modal-text');
+            const modalIcon = document.getElementById('modal-icon');
+
+            const showModal = (title, text, isSuccess) => {
+                modalTitle.textContent = title;
+                modalText.textContent = text;
+                modalIcon.innerHTML = isSuccess ? '💌' : '😥';
+                modal.classList.add('active');
+                modal.setAttribute('aria-hidden', 'false');
+            };
+
+            const closeModal = () => {
+                modal.classList.remove('active');
+                modal.setAttribute('aria-hidden', 'true');
+            };
+
+            if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
+            if (modalOkBtn) modalOkBtn.addEventListener('click', closeModal);
+            if (modal) modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 const btn = document.getElementById('submit-btn');
@@ -255,15 +282,16 @@
                         body: JSON.stringify(data)
                     });
                     
+                    const result = await res.json().catch(() => ({}));
+                    
                     if (res.ok) {
-                        alert('Message sent successfully! Thanks for reaching out.');
+                        showModal(result.title || 'Awesome! 🚀', result.message || 'Message sent successfully! Thanks for reaching out.', true);
                         form.reset();
                     } else {
-                        const result = await res.json().catch(() => ({}));
-                        alert('Failed to send message: ' + (result.message || 'Unknown error'));
+                        showModal(result.title || 'Oops! 😥', result.message || 'Failed to send message.', false);
                     }
                 } catch (err) {
-                    alert('An error occurred while sending the message. Please try again or check your internet connection.');
+                    showModal('Error 📡', 'An error occurred while sending the message. Please try again or check your internet connection.', false);
                 } finally {
                     btn.innerHTML = originalText;
                     btn.disabled = false;
