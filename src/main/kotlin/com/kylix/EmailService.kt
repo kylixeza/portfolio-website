@@ -42,7 +42,7 @@ object EmailService {
                 }
 
                 email.setFrom(username, "Portfolio Contact")
-                email.subject = "New Contact Message from $email"
+                email.subject = "New Contact Message from $replyTo"
                 email.setMsg("You received a new message from your portfolio website.\n\nFrom: $name\nEmail: $replyTo\n\nMessage:\n$message")
                 email.addTo(username)
                 email.addReplyTo(replyTo, name)
